@@ -1,9 +1,9 @@
 {
-    "name": "jfusion/session",
+    "name": "jfusion/plugin",
     "type": "jfusion-framework",
     "description": "JFusion Framework session related",
-    "keywords": ["jfusion", "framework", "user"],
-    "homepage": "https://github.com/jfusion-framework/session",
+    "keywords": ["jfusion", "framework", "plugin"],
+    "homepage": "https://github.com/jfusion-framework/plugin",
     "license": "GPL-2.0+",
     "require": {
         "php": ">=5.3.10",
@@ -23,7 +23,7 @@
     },
     "autoload": {
         "psr-4": {
-            "JFusion\\Session\\": "src/"
+            "JFusion\\Plugin\\": "src/"
         }
     }
 }
