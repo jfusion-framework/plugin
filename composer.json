@@ -1,7 +1,7 @@
 {
     "name": "jfusion/plugin",
     "type": "jfusion-framework",
-    "description": "JFusion Framework session related",
+    "description": "JFusion Framework plugin related",
     "keywords": ["jfusion", "framework", "plugin"],
     "homepage": "https://github.com/jfusion-framework/plugin",
     "license": "GPL-2.0+",
