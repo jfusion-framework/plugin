@@ -25,5 +25,6 @@
         "psr-4": {
             "JFusion\\Plugin\\": "src/"
         }
-    }
+    },
+    "minimum-stability" : "beta"
 }
