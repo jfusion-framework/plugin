@@ -614,8 +614,6 @@ JS;
 	 * @throws \RuntimeException
 	 */
 	private function curlFrameless(&$data) {
-		require_once(JPATH_ADMINISTRATOR . DIRECTORY_SEPARATOR . 'components' . DIRECTORY_SEPARATOR . 'com_jfusion' . DIRECTORY_SEPARATOR . 'models' . DIRECTORY_SEPARATOR . 'model.cookie.php');
-
 		$url = $data->source_url;
 
 		$config = Factory::getConfig();

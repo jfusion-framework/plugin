@@ -684,6 +684,9 @@ class Plugin_User extends Plugin
 				}
 			}
 		} else {
+			/**
+			 * TODO REMOVE usage of $userinfo->group_id? or add it to Userinfo
+			 */
 			foreach ($usergroups as $group) {
 				if ($group == $userinfo->group_id) {
 					$correct = true;
@@ -750,7 +753,6 @@ class Plugin_User extends Plugin
 	 */
 	final public function curlLogin(Userinfo $userinfo, $options, $type = 'brute_force', $curl_options_merge = array())
 	{
-		require_once JPATH_ADMINISTRATOR . DIRECTORY_SEPARATOR . 'components' . DIRECTORY_SEPARATOR . 'com_jfusion' . DIRECTORY_SEPARATOR . 'models' . DIRECTORY_SEPARATOR . 'model.curl.php';
 		$curl_options = array();
 		$status = array(LogLevel::ERROR => array(), LogLevel::DEBUG => array());
 		$source_url = $this->params->get('source_url');
@@ -865,6 +867,9 @@ class Plugin_User extends Plugin
 				break;
 			case 'brute_force':
 				$curl_options['brute_force'] = $type;
+				$curl = new Curl($options);
+				$status = $curl->login();
+				break;
 			default:
 				$curl = new Curl($options);
 				$status = $curl->login();
@@ -878,7 +883,6 @@ class Plugin_User extends Plugin
 	 */
 	final public function curlReadPage()
     {
-        require_once JPATH_ADMINISTRATOR . DIRECTORY_SEPARATOR . 'components' . DIRECTORY_SEPARATOR . 'com_jfusion' . DIRECTORY_SEPARATOR . 'models' . DIRECTORY_SEPARATOR . 'model.curl.php';
         $curl_options = array();
         $status = array('error' => array(), 'debug' => array());
         $status['cURL'] = array();
@@ -932,7 +936,6 @@ class Plugin_User extends Plugin
 	 */
 	final public function curlLogout(Userinfo $userinfo, $options, $type = 'brute_force', $curl_options_merge = array())
 	{
-		require_once JPATH_ADMINISTRATOR . DIRECTORY_SEPARATOR . 'components' . DIRECTORY_SEPARATOR . 'com_jfusion' . DIRECTORY_SEPARATOR . 'models' . DIRECTORY_SEPARATOR . 'model.curl.php';
 		$curl_options = array();
 		$status = array('error' => array(), 'debug' => array());
 

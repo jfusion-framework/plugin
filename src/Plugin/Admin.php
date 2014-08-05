@@ -159,6 +159,9 @@ class Plugin_Admin extends Plugin
 		    throw new RuntimeException($this->getJname() . ' -> joomla_int ' . Text::_('NO_DATABASE'));
 	    } else {
 		    //added check for missing files of copied plugins after upgrade
+		    /**
+		     * TODO change so we dont use a "constant"
+		     */
 		    $path = JFUSION_PLUGIN_PATH . DIRECTORY_SEPARATOR . $this->getName() . DIRECTORY_SEPARATOR;
 		    if (!file_exists($path . 'admin.php')) {
 			    throw new RuntimeException(Text::_('NO_FILES') . ' admin.php');
