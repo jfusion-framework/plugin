@@ -1,0 +1,29 @@
+{
+    "name": "jfusion/session",
+    "type": "jfusion-framework",
+    "description": "JFusion Framework session related",
+    "keywords": ["jfusion", "framework", "user"],
+    "homepage": "https://github.com/jfusion-framework/session",
+    "license": "GPL-2.0+",
+    "require": {
+        "php": ">=5.3.10",
+        "jfusion/core": "~1.0",
+        "jfusion/user": "~1.0",
+        "jfusion/dslo": "~1.0",
+        "jfusion/debugger": "~1.0",
+        "jfusion/parser": "~1.0",
+        "jfusion/api": "~1.0",
+        "jfusion/curl": "~1.0",
+        "joomla/language": "~1.0",
+        "joomla/uri": "~1.0",
+        "joomla/filesystem": "~1.0",
+        "joomla/event": "~1.0",
+        "joomla/registry": "~1.0",
+        "psr/log": "~1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "JFusion\\Session\\": "src/"
+        }
+    }
+}
