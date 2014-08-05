@@ -11,7 +11,7 @@
         "jfusion/user": "~1.0",
         "jfusion/dslo": "~1.0",
         "jfusion/debugger": "~1.0",
-        "jfusion/parser": "~1.0",
+        "jfusion/parser": "~1.1",
         "jfusion/api": "~1.0",
         "jfusion/curl": "~1.0",
         "joomla/language": "~1.0",
